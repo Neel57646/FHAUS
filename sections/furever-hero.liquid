@@ -1,26 +1,50 @@
 <section class="furever-hero color-{{ section.settings.color_scheme }}">
-  <div class="furever-hero__content page-width">
-    {% if section.settings.eyebrow != blank %}
-      <p class="furever-hero__eyebrow">{{ section.settings.eyebrow }}</p>
-    {% endif %}
-
-    <h1>{{ section.settings.heading | escape }}</h1>
-
-    {% if section.settings.subheading != blank %}
-      <p class="furever-hero__subheading">{{ section.settings.subheading }}</p>
-    {% endif %}
-
-    <div class="furever-hero__actions">
-      {% if section.settings.primary_button_label != blank %}
-        <a class="button button--primary" href="{{ section.settings.primary_button_link }}">
-          {{ section.settings.primary_button_label }}
-        </a>
+  <div class="furever-hero__grid page-width">
+    <div class="furever-hero__content">
+      {% if section.settings.eyebrow != blank %}
+        <p class="furever-hero__eyebrow">{{ section.settings.eyebrow }}</p>
       {% endif %}
 
-      {% if section.settings.secondary_button_label != blank %}
-        <a class="button button--secondary" href="{{ section.settings.secondary_button_link }}">
-          {{ section.settings.secondary_button_label }}
-        </a>
+      <h1>{{ section.settings.heading | escape }}</h1>
+
+      {% if section.settings.subheading != blank %}
+        <p class="furever-hero__subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+
+      <div class="furever-hero__actions">
+        {% if section.settings.primary_button_label != blank %}
+          <a class="button button--primary" href="{{ section.settings.primary_button_link }}">
+            {{ section.settings.primary_button_label }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.secondary_button_label != blank %}
+          <a class="button button--secondary" href="{{ section.settings.secondary_button_link }}">
+            {{ section.settings.secondary_button_label }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="furever-hero__badges" aria-label="Brand highlights">
+        {% if section.settings.badge_one != blank %}
+          <span>{{ section.settings.badge_one }}</span>
+        {% endif %}
+        {% if section.settings.badge_two != blank %}
+          <span>{{ section.settings.badge_two }}</span>
+        {% endif %}
+        {% if section.settings.badge_three != blank %}
+          <span>{{ section.settings.badge_three }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="furever-hero__media" aria-label="Furever Happy lifestyle image">
+      {% if section.settings.hero_image != blank %}
+        {{ section.settings.hero_image | image_url: width: 1100 | image_tag: loading: 'eager', sizes: '(min-width: 990px) 44vw, 92vw', widths: '420, 640, 840, 1100', alt: section.settings.hero_image.alt }}
+      {% else %}
+        <div class="furever-hero__placeholder">
+          <span>FH</span>
+        </div>
       {% endif %}
     </div>
   </div>
@@ -51,6 +75,11 @@
       "default": "A cheerful pet-loving storefront foundation, ready for Shopify products and your next design pass."
     },
     {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
       "type": "text",
       "id": "primary_button_label",
       "label": "Primary button label",
@@ -71,6 +100,24 @@
       "type": "url",
       "id": "secondary_button_link",
       "label": "Secondary button link"
+    },
+    {
+      "type": "text",
+      "id": "badge_one",
+      "label": "Badge one",
+      "default": "Soft goods"
+    },
+    {
+      "type": "text",
+      "id": "badge_two",
+      "label": "Badge two",
+      "default": "Daily care"
+    },
+    {
+      "type": "text",
+      "id": "badge_three",
+      "label": "Badge three",
+      "default": "Happy homes"
     },
     {
       "type": "select",
