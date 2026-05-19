@@ -1,0 +1,68 @@
+<section class="furever-story">
+  <div class="page-width furever-story__grid">
+    <div>
+      <p class="section-kicker">Brand foundation</p>
+      <h2>{{ section.settings.heading | escape }}</h2>
+      {% if section.settings.body != blank %}
+        <p>{{ section.settings.body }}</p>
+      {% endif %}
+    </div>
+
+    <div class="furever-story__features" aria-label="Storefront readiness">
+      {% if section.settings.feature_one != blank %}
+        <div class="feature-card">{{ section.settings.feature_one }}</div>
+      {% endif %}
+      {% if section.settings.feature_two != blank %}
+        <div class="feature-card">{{ section.settings.feature_two }}</div>
+      {% endif %}
+      {% if section.settings.feature_three != blank %}
+        <div class="feature-card">{{ section.settings.feature_three }}</div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Furever story",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Built around everyday joy"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Furever Happy is being prepared as a friendly Shopify storefront for pet-inspired products, simple shopping flows, and a warmer brand experience."
+    },
+    {
+      "type": "text",
+      "id": "feature_one",
+      "label": "Feature one",
+      "default": "Shopify-ready theme structure"
+    },
+    {
+      "type": "text",
+      "id": "feature_two",
+      "label": "Feature two",
+      "default": "Editable sections for brand storytelling"
+    },
+    {
+      "type": "text",
+      "id": "feature_three",
+      "label": "Feature three",
+      "default": "Product space ready for catalog setup"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Furever story"
+    }
+  ]
+}
+{% endschema %}
