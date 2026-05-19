@@ -1,0 +1,33 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Furever Happy",
+    "theme_version": "1.0.0",
+    "theme_author": "Furever Happy",
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://help.shopify.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background",
+        "default": "#fffaf3"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "#2f2d2a"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent",
+        "default": "#2f7d6d"
+      }
+    ]
+  }
+]
