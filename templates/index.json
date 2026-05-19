@@ -3,30 +3,33 @@
     "hero": {
       "type": "furever-hero",
       "settings": {
-        "eyebrow": "Welcome to",
+        "eyebrow": "Pet care with a happier rhythm",
         "heading": "Furever Happy",
-        "subheading": "A cheerful pet-loving storefront foundation, ready for Shopify products and your next design pass.",
-        "primary_button_label": "Shop soon",
+        "subheading": "Comforting everyday essentials and feel-good finds for pets, their people, and the small rituals that make home brighter.",
+        "primary_button_label": "Shop all",
         "primary_button_link": "/collections/all",
-        "secondary_button_label": "Our story",
-        "secondary_button_link": "/pages/about"
+        "secondary_button_label": "Meet the brand",
+        "secondary_button_link": "/pages/about",
+        "badge_one": "Soft goods",
+        "badge_two": "Daily care",
+        "badge_three": "Happy homes"
       }
     },
     "story": {
       "type": "furever-story",
       "settings": {
-        "heading": "Built around everyday joy",
-        "body": "Furever Happy is being prepared as a friendly Shopify storefront for pet-inspired products, simple shopping flows, and a warmer brand experience.",
-        "feature_one": "Shopify-ready theme structure",
-        "feature_two": "Editable sections for brand storytelling",
-        "feature_three": "Product space ready for catalog setup"
+        "heading": "For the tiny tail-wag moments",
+        "body": "Furever Happy is shaping into a cheerful home for pet-inspired products that feel useful, warm, and easy to love. The first collection space is ready for Shopify products as soon as the catalog is added.",
+        "feature_one": "Everyday pet essentials",
+        "feature_two": "Warm, giftable finds",
+        "feature_three": "Simple Shopify shopping"
       }
     },
     "products": {
       "type": "furever-products",
       "settings": {
-        "heading": "Product space",
-        "body": "Connect Shopify products here when the catalog is ready.",
+        "heading": "Start with the favorites",
+        "body": "Feature your first collection here. Until products are connected, these cards hold the space so the homepage still feels complete.",
         "collection": ""
       }
     }
