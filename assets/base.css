@@ -1,0 +1,257 @@
+:root {
+  --color-background: #fffaf3;
+  --color-text: #2f2d2a;
+  --color-muted: #6f6860;
+  --color-accent: #2f7d6d;
+  --color-accent-strong: #21584d;
+  --color-surface: #ffffff;
+  --color-border: #e7dccc;
+  --shadow-soft: 0 16px 40px rgba(47, 45, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  transform: translateY(-160%);
+  background: var(--color-text);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 10;
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0);
+}
+
+.page-width {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 72px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 250, 243, 0.94);
+}
+
+.site-header__brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.furever-hero {
+  min-height: 520px;
+  display: grid;
+  align-items: center;
+  padding: 72px 0;
+  background:
+    linear-gradient(120deg, rgba(47, 125, 109, 0.13), rgba(255, 250, 243, 0) 46%),
+    var(--color-background);
+}
+
+.furever-hero__content {
+  max-width: 760px;
+}
+
+.furever-hero__eyebrow,
+.section-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--color-accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.furever-hero h1 {
+  margin: 0;
+  max-width: 720px;
+  font-size: clamp(3rem, 9vw, 6.25rem);
+  line-height: 0.95;
+}
+
+.furever-hero__subheading {
+  max-width: 620px;
+  margin: 1.25rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.18rem;
+}
+
+.furever-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.button--primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.button--secondary {
+  color: var(--color-accent-strong);
+}
+
+.furever-story,
+.furever-products {
+  padding: 72px 0;
+}
+
+.furever-story__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 32px;
+  align-items: start;
+}
+
+.furever-story h2,
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.furever-story p,
+.section-heading p {
+  color: var(--color-muted);
+  font-size: 1.02rem;
+}
+
+.furever-story__features {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.feature-card,
+.product-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-card {
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  overflow: hidden;
+}
+
+.product-card a {
+  display: block;
+}
+
+.product-card h3,
+.product-card p {
+  margin-inline: 1rem;
+}
+
+.product-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.product-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+}
+
+.product-card__media {
+  aspect-ratio: 4 / 3;
+  background:
+    linear-gradient(135deg, rgba(47, 125, 109, 0.22), rgba(247, 178, 103, 0.22)),
+    #f5eadc;
+}
+
+.site-footer {
+  padding: 28px 32px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px 20px;
+  }
+
+  .site-header__nav {
+    justify-content: flex-start;
+  }
+
+  .furever-hero {
+    min-height: auto;
+    padding: 56px 0;
+  }
+
+  .furever-story__grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
