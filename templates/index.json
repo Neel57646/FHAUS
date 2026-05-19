@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "hero": {
+      "type": "furever-hero",
+      "settings": {
+        "eyebrow": "Welcome to",
+        "heading": "Furever Happy",
+        "subheading": "A cheerful pet-loving storefront foundation, ready for Shopify products and your next design pass.",
+        "primary_button_label": "Shop soon",
+        "primary_button_link": "/collections/all",
+        "secondary_button_label": "Our story",
+        "secondary_button_link": "/pages/about"
+      }
+    },
+    "story": {
+      "type": "furever-story",
+      "settings": {
+        "heading": "Built around everyday joy",
+        "body": "Furever Happy is being prepared as a friendly Shopify storefront for pet-inspired products, simple shopping flows, and a warmer brand experience.",
+        "feature_one": "Shopify-ready theme structure",
+        "feature_two": "Editable sections for brand storytelling",
+        "feature_three": "Product space ready for catalog setup"
+      }
+    },
+    "products": {
+      "type": "furever-products",
+      "settings": {
+        "heading": "Product space",
+        "body": "Connect Shopify products here when the catalog is ready.",
+        "collection": ""
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "story",
+    "products"
+  ]
+}
