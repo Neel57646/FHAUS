@@ -10,13 +10,22 @@
 
     <div class="furever-story__features" aria-label="Storefront readiness">
       {% if section.settings.feature_one != blank %}
-        <div class="feature-card">{{ section.settings.feature_one }}</div>
+        <div class="feature-card">
+          <span>01</span>
+          <strong>{{ section.settings.feature_one }}</strong>
+        </div>
       {% endif %}
       {% if section.settings.feature_two != blank %}
-        <div class="feature-card">{{ section.settings.feature_two }}</div>
+        <div class="feature-card">
+          <span>02</span>
+          <strong>{{ section.settings.feature_two }}</strong>
+        </div>
       {% endif %}
       {% if section.settings.feature_three != blank %}
-        <div class="feature-card">{{ section.settings.feature_three }}</div>
+        <div class="feature-card">
+          <span>03</span>
+          <strong>{{ section.settings.feature_three }}</strong>
+        </div>
       {% endif %}
     </div>
   </div>
