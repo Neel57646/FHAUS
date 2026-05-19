@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.accent_color }}">
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body>
+    <a class="skip-to-content-link" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+
+    <header class="site-header" role="banner">
+      <a class="site-header__brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+        Furever Happy
+      </a>
+
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <a href="{{ routes.root_url }}">Home</a>
+        <a href="/collections/all">Shop</a>
+        <a href="/pages/about">About</a>
+        <a href="/cart">Cart</a>
+      </nav>
+    </header>
+
+    <main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ 'now' | date: '%Y' }} Furever Happy. Made for warm, everyday pet moments.</p>
+    </footer>
+  </body>
+</html>
